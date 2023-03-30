@@ -21,6 +21,9 @@ Route::get('/login/{lang?}', 'Auth\LoginController@showLoginForm')->name('login'
 
 //test email fire
 route::get('test_email','TestEmailController@test_email')->name('test_email');
+
+route::get('test_email_1','TestEmailController@test_email_1')->name('test_email_1');
+
 Route::get( '/', [ 'as' => 'home', 'uses' => 'HomeController@index',] )->middleware(
     [
         'auth',
