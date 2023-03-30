@@ -19,7 +19,8 @@ Route::get('/register/{lang?}', 'Auth\RegisterController@showRegistrationForm')-
 Route::post('register', 'Auth\RegisterController@register')->name('register');
 Route::get('/login/{lang?}', 'Auth\LoginController@showLoginForm')->name('login');
 
-
+//test email fire
+route::get('test_email','TestEmailController@test_email')->name('test_email');
 Route::get( '/', [ 'as' => 'home', 'uses' => 'HomeController@index',] )->middleware(
     [
         'auth',
